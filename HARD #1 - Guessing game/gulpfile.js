@@ -8,23 +8,6 @@ var gulp = require('gulp'),
 	copy = require('gulp-copy'),
 	plumber = require('gulp-plumber');
 
-gulp.task('babel', () => {
-	return gulp.src('src/main.js')
-		.pipe(plumber({
-			errorHandler: (err) => {
-				console.log(err);
-				// this.emit('end');
-			}
-		}))
-		.pipe(sourceMaps.init())
-			.pipe(babel({
-				presets: ['es2015']
-			}))
-			.pipe(uglify())
-		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('dist'));
-});
-
 gulp.task('minify-css', () => {
 	return gulp.src('src/**.css')
 		.pipe(plumber({
@@ -54,10 +37,6 @@ gulp.task('copy', () => {
 });
 
 gulp.task('watch', () => {
-	gulp.watch('src/**.js', ['babel']);
 	gulp.watch('src/**.css', ['minify-css']);
 	gulp.watch('src/**', ['copy']);
-});
-
-gulp.task('default', () => {
 });

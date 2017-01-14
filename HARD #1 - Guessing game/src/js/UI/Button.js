@@ -7,8 +7,6 @@ export class Button extends UIElement {
 		this.element.innerText = text;
 		this.element.setAttribute('id', id);
 		this.element.classList.add('btn', className);
-
-		this.element.addEventListener('click', (e) => console.log(e.target));
 	}
 	get() {
 		return this.element;
@@ -20,5 +18,9 @@ export class Button extends UIElement {
 	show() {
 		this.element.removeAttribute('disabled');
 		this.element.style.dsiplay = 'inline-block';
+	}
+	event(event, callback) {
+		console.log('Adding event "' + event + '" for #' + this.element.getAttribute('id'), callback);
+		this.element.addEventListener(event, callback);
 	}
 }
