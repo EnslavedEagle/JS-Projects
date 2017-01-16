@@ -37,7 +37,7 @@ export class Game {
 		this.maxNumber = 100;
 
 		// start the game
-		this.setStatus("gamePlay");
+		this.setStatus('gamePlay');
 		this.generateNumber();
 	}
 	generateNumber() {
@@ -57,7 +57,6 @@ export class Game {
 			return true;
 		}
 
-		console.log('Numbers: ' + this.numbersGuessed, 'min: ' + this.minNumber, 'max: ' + this.maxNumber);
 		if(this.minNumber+1 >= this.maxNumber) {
 			this.setStatus('Impossible');
 			return false;

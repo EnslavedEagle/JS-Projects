@@ -9,7 +9,6 @@ export class Button extends UIElement {
 		this.element.classList.add('btn', className);
 	}
 	event(event, callback) {
-		console.log('Adding event "' + event + '" for #' + this.element.getAttribute('id'), callback);
 		this.element.addEventListener(event, callback);
 	}
 }

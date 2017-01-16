@@ -40,14 +40,12 @@ export class UIHandler {
 		}
 	}
 	clear() {
-		console.log('Clearing game');
 		document.getElementsByClassName('game__content')[0].innerHTML = '';
 		document.getElementsByClassName('game__buttons')[0].innerHTML = '';
 	}
 	render(gameStatus) {
 		this.clear();
 		for(let x in this[gameStatus]) {
-			console.log(this[gameStatus][x]);
 			this[gameStatus][x].forEach((element) => {
 				if(element.render)
 					element.render(x);
