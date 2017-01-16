@@ -2,7 +2,7 @@
 
 Thanks for Reddit users for the list of [programming project challenges](https://www.reddit.com/r/dailyprogrammer/wiki/challenges)!
 
-[See the demo](tth.patrykb.pl/NumberGuessingGame/)
+[See the demo](http://tth.patrykb.pl/NumberGuessingGame/)
 
 
 **This project was created using:**
